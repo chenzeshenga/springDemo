@@ -7,7 +7,7 @@
     <groupId>com.chenzeshenga</groupId>
     <artifactId>springDemo</artifactId>
     <version>1.0-SNAPSHOT</version>
-    
+
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -27,6 +27,11 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
+            <version>5.0.7.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-expression</artifactId>
             <version>5.0.7.RELEASE</version>
         </dependency>
     </dependencies>
