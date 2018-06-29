@@ -1,0 +1,13 @@
+/**
+ * @FILE_NAME MyBeanFactory.java
+ * @AUTHOR chenz
+ * @DATE 2018Äê6ÔÂ29ÈÕ
+ */
+package com.chenzeshenga.inject.static_factory;
+
+public class MyBeanFactory {
+
+	public static UserServiceImpl getUserService() {
+		return new UserServiceImpl();
+	}
+}
