@@ -4,6 +4,10 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 	<!-- 配置service <bean> 配置需要创建的对象 id：用于之后从spring 中获得实例 class 需要创建实例的全限定类名 -->
-	<bean id="userService" class="com.chenzeshenga.ioc.UserServiceImpl" />
+	<bean id="bookService" class="com.chenzeshenga.di.impl.BookServiceImpl">
+		<property name="bookDao" ref="bookDao"></property>
+	</bean>
+
+	<bean id="bookDao" class="com.chenzeshenga.di.impl.BookDaoImpl" />
 
 </beans>
