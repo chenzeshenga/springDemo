@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- setter方法注入 -->
+	<bean id="person" class="com.chenzeshenga.setter.Person">
+		<property name="pname" value="sjkf" />
+		<property name="age" value="28"></property>
+		<property name="address" ref="address"></property>
+		<property name="homeaddr" ref="homeaddr"></property>
+	</bean>
+
+	<bean id="homeaddr" class="com.chenzeshenga.setter.Address">
+		<property name="addr" value="shfkjshj"></property>
+		<property name="tel" value="122"></property>
+	</bean>
+
+	<bean id="address" class="com.chenzeshenga.setter.Address">
+		<property name="addr" value="dsfjkshkh"></property>
+		<property name="tel" value="122"></property>
+	</bean>
+</beans>

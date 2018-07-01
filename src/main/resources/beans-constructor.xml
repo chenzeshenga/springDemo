@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 构造方法注入 -->
+	<bean id="user" class="com.chenzeshenga.constructor.User">
+		<constructor-arg name="username" value="abd"
+			type="java.lang.String" />
+		<constructor-arg name="age" value="18"
+			type="java.lang.Integer" />
+	</bean>
+
+</beans>
