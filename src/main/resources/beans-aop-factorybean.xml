@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="userService"
+		class="com.chenzeshenga.aop.factory_bean.UserServiceImpl" />
+
+	<bean id="myAspect"
+		class="com.chenzeshenga.aop.factory_bean.MyAspect"></bean>
+	<bean id="proxyService"
+		class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="interfaces"
+			value="com.chenzeshenga.aop.factory_bean.IUserService" />
+		<property name="target" ref="userService" />
+		<property name="interceptorNames" value="myAspect" />
+	</bean>
+
+</beans>
